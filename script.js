@@ -19,7 +19,6 @@ function createGrid() {
             square.style.backgroundColor = '#000000';
         })
     }
-    console.log('test');
 }
 
 createGrid();
