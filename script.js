@@ -16,7 +16,12 @@ function createGrid() {
         container.appendChild(square);
 
         square.addEventListener('mouseover', function () {
-            square.style.backgroundColor = '#000000';
+
+            let red = Math.floor(Math.random() * 255);
+            let green = Math.floor(Math.random() * 255);
+            let blue = Math.floor(Math.random() * 255);
+
+            square.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
         })
     }
 }
