@@ -1,12 +1,7 @@
-.square {
-  width: 38px;
-  height: 38px;
-}
-
 .container {
   display: flex;
   flex-flow: row wrap;
-  width: 608px;
-  height: 608px;
+  width: 640px;
+  height: 640px;
   border: solid black 2px;
 }
