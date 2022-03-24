@@ -30,10 +30,16 @@ resetBtn.addEventListener('click', function() {
     gridSize = input * input;
     squareSize = 640 / input;
 
-    if (input > 100) {
-        alert('Please select a smaller number of squares.');
-    } else {
+    if (input === null) {
+        return;
+    } else if (input === '') {
+        return;
+    } else if (input < 1) {
+        alert('Please enter a number greater than 0.');
+    } else if (input >= 1 && input <= 100) {
         container.innerHTML = '';
         createGrid();
+    } else {
+        alert('Please select a smaller number.')
     }
 })
