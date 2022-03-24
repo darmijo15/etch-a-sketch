@@ -5,6 +5,8 @@ let input = 16;
 let gridSize = input * input;
 let squareSize = 640 / input;
 
+let squareColor = 'rgb(0, 0, 0)';
+
 function createGrid() {
     for (i = 1; i <= gridSize; i++) {
         const square = document.createElement('div');
@@ -16,12 +18,7 @@ function createGrid() {
         container.appendChild(square);
 
         square.addEventListener('mouseover', function () {
-
-            let red = Math.floor(Math.random() * 255);
-            let green = Math.floor(Math.random() * 255);
-            let blue = Math.floor(Math.random() * 255);
-
-            square.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+            square.style.backgroundColor = squareColor;
         })
     }
 }
