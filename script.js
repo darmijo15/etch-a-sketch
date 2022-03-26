@@ -1,5 +1,6 @@
 const container = document.querySelector('.container');
-const resetBtn = document.querySelector('#reset');
+const clearBtn = document.querySelector('#clear');
+const resizeBtn = document.querySelector('#resize');
 
 let input = 16;
 let gridSize = input * input;
@@ -25,7 +26,13 @@ function createGrid() {
 
 createGrid();
 
-resetBtn.addEventListener('click', function() {
+clearBtn.addEventListener('click', function() {
+    container.innerHTML = '';
+    createGrid();
+})
+
+resizeBtn.addEventListener('click', function() {
+
     promptInput = prompt('How many squares do you want on each side of the grid?', '16');
 
     if (promptInput === null) {
@@ -35,7 +42,7 @@ resetBtn.addEventListener('click', function() {
     } else if (promptInput < 1) {
         alert('Please enter a number greater than 0.');
     } else if (promptInput >= 1 && promptInput <= 100) {
-        input = promptInput;
+        input = promptInput; 
         gridSize = input * input;
         squareSize = 640 / input;
         container.innerHTML = '';
