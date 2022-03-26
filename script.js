@@ -26,17 +26,18 @@ function createGrid() {
 createGrid();
 
 resetBtn.addEventListener('click', function() {
-    input = prompt('How many squares do you want on each side of the grid?', '16');
-    gridSize = input * input;
-    squareSize = 640 / input;
+    promptInput = prompt('How many squares do you want on each side of the grid?', '16');
 
-    if (input === null) {
+    if (promptInput === null) {
         return;
-    } else if (input === '') {
+    } else if (promptInput === '') {
         return;
-    } else if (input < 1) {
+    } else if (promptInput < 1) {
         alert('Please enter a number greater than 0.');
-    } else if (input >= 1 && input <= 100) {
+    } else if (promptInput >= 1 && promptInput <= 100) {
+        input = promptInput;
+        gridSize = input * input;
+        squareSize = 640 / input;
         container.innerHTML = '';
         createGrid();
     } else {
