@@ -14,7 +14,13 @@ body {
   border: solid black 2px;
 }
 
-#reset {
-  font-size: 24px;
+#button-container {
+  display: flex;
+  justify-content: space-around;
+  width: 700px;
   margin-top: 40px;
+}
+
+button {
+  font-size: 24px;
 }
