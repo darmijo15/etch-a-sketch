@@ -24,3 +24,17 @@ body {
 button {
   font-size: 24px;
 }
+
+.color-container {
+  margin-top: 20px;
+}
+
+#color-picker {
+  width: 100px;
+}
+
+label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  margin-left: 10px;
+}
