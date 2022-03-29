@@ -1,12 +1,13 @@
 const container = document.querySelector('.container');
 const clearBtn = document.querySelector('#clear');
 const resizeBtn = document.querySelector('#resize');
+const colorPicker = document.querySelector('#color-picker');
 
 let input = 16;
 let gridSize = input * input;
 let squareSize = 640 / input;
 
-let squareColor = 'rgb(0, 0, 0)';
+let squareColor = colorPicker.value;
 
 function createGrid() {
     for (i = 1; i <= gridSize; i++) {
@@ -50,4 +51,9 @@ resizeBtn.addEventListener('click', function() {
     } else {
         alert('Please select a smaller number.')
     }
+})
+
+colorPicker.addEventListener('change', function() {
+    squareColor = colorPicker.value;
+    console.log(squareColor);
 })
