@@ -6,7 +6,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.container {
+.sketchpad-container {
   display: flex;
   flex-flow: row wrap;
   width: 640px;
@@ -21,7 +21,7 @@ body {
   margin-top: 40px;
 }
 
-button {
+.buttons {
   font-size: 24px;
 }
 
